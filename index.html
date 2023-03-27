@@ -1,1 +1,100 @@
-Hello World2!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/BrowserFS/2.0.0/browserfs.min.js" defer></script> -->
+    <script src="./browserfs.min.js" defer></script>
+
+    <script src="./index.js" defer></script>
+
+    <link rel="icon" href="../public/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primereact/resources/themes/lara-light-indigo/theme.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primereact/resources/primereact.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@3.2.1/primeflex.min.css" />
+
+
+    <meta
+      name="description"
+      content="OpenSCAD Playground: edit .scad models and render them to STL from the browser (WebAssembly build OpenSCAD, with Monaco editor and STL Viewer)"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    
+    <!-- https://developers.google.com/web/fundamentals/web-app-manifest/ -->
+    <link rel="manifest" href="manifest.json" />
+
+    <title>OpenSCAD Playground</title>
+    <style>
+      #root,
+      body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .p-tabmenu-nav {
+        justify-content: center;
+      }
+
+      .absolute-fill {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+
+
+      .monaco-editor {
+        background-color: rgba(255,255,255,0.5) !important;
+      }
+      .overflow-guard,
+      .monaco-scrollable-element,
+      .monaco-editor-background {
+        background-color: transparent !important;
+      }
+
+      .opacity-animated {
+        transition: opacity 0.5s ease-in-out;
+      }
+      .opacity-0 {
+        opacity: 0;
+      }
+
+      @media only screen and (max-height: 600px),
+           only screen and (max-width: 600px),
+           only screen and (max-width: 767px),
+           only screen and (max-aspect-ratio: 1/2) {
+        .github-fork-ribbon {
+          display: none;
+        }
+      }
+      
+    </style>
+    <style>.github-fork-ribbon:before { background-color: #333; }</style>
+  
+  </head>
+  <body>
+    <a target="_blank" class="github-fork-ribbon"
+       href="https://github.com/openscad/openscad-playground/tree/rewrite1"
+       data-ribbon="Fork me on GitHub"
+       title="Fork me on GitHub">
+       Fork me on GitHub
+    </a>
+
+    <noscript>You need to enable JavaScript to run the OpenSCAD Playground.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
